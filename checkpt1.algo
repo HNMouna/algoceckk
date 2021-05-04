@@ -1,0 +1,36 @@
+ALGORITHM  Checkpoint1
+VAR
+    nb_espace:INTEGER :=0;
+    i:INTEGER :=0;
+    sentence : STRING
+    
+BEGIN
+read(str)
+FOR i FROM 0 to str.length-1 STEP 1 DO
+    IF (str[i] = "") THEN
+        nb_espace=nb_espace+1
+    END_IF
+        
+
+    SWITCH (sentence[i]) DO    
+        case 'A' : nbrvowels  := nbrvowels+1; Break;
+        case 'a' : nbrvowels  := nbrvowels+1; Break;
+        case 'E' : nbrvowels  := nbrvowels+1; Break;
+        case 'e' : nbrvowels  := nbrvowels+1; Break;
+        case 'I' : nbrvowels  := nbrvowels+1; Break;
+        case 'i' : nbrvowels  := nbrvowels+1; Break;
+        case 'O' : nbrvowels  := nbrvowels+1; Break;
+        case 'o' : nbrvowels  := nbrvowels+1; Break;
+        case 'U' : nbrvowels  := nbrvowels+1; Break;
+        case 'u' : nbrvowels  := nbrvowels+1; Break;
+        case 'Y' : nbrvowels  := nbrvowels+1; Break;
+        case 'y' : nbrvowels  := nbrvowels+1; Break;
+        default : nbrvowels  :=0;
+    END_SWITCH
+END_FOR
+
+   write ('nombre de mot =' ,nb_espace+1)
+    write ('nombre lettre =' ,str.length - nb_espace)
+     write ('nombre vowels  =' ,nbrvowels)
+    
+END
